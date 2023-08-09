@@ -1,25 +1,24 @@
 package aula_01_08;
 
-import javax.swing.JOptionPane;
-
 public class program_two {
+    public static void main(String[] args) {
+        int[][] rectangle;
+        int row = 10;
+        int column = 40;
 
-	public static void main(String[] args) {
-		String name = "";
-		String phone = "";
-		String mail = "";
-		int years = 29;
-		
-		//Ex 01
-		name = JOptionPane.showInputDialog("Insert name:");
-		phone = JOptionPane.showInputDialog("Insert phone:");
-		mail = JOptionPane.showInputDialog("Insert mail:");
-		
-		//Sysout
-		System.out.println("Name: " + name);
-		System.out.println("Phone: " + phone);
-		System.out.println("Years old: " + years);
-		System.out.println("Mail: " + mail);
-	}
+        rectangle = new int[row][column];
 
+        // Filling the "A" on the sides
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (i == 0 || i == row - 1 || j == 0 || j == column - 1) {
+                    System.out.print("A ");
+                } else {
+                    System.out.print(" ");
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
 }

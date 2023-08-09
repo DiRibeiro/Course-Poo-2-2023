@@ -11,14 +11,14 @@ public class program_one {
 		String years = "";
 		
 		//Ex 01
+		System.out.println("Meu Super Programa!");
+		JOptionPane.showMessageDialog(null, "Meu Super Programa!");
+		
 		name = JOptionPane.showInputDialog("Insert name:");
-		JOptionPane.showMessageDialog(null, "Name: " + name);
 		phone = JOptionPane.showInputDialog("Insert phone:");
-		JOptionPane.showMessageDialog(null, "Phone: " + phone);
-		mail = JOptionPane.showInputDialog("Insert mail:");
-		JOptionPane.showMessageDialog(null, "Mail: " + mail);
 		years = JOptionPane.showInputDialog("Insert years:");
-		JOptionPane.showMessageDialog(null, "Years old: " + years);
+		mail = JOptionPane.showInputDialog("Insert mail:");
+		JOptionPane.showMessageDialog(null, "Name: " + name + "\nPhone: " + phone + "\nMail: " + mail + "\nYears old: " + years);
 	}
 
 }

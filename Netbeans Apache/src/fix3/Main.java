@@ -28,6 +28,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         AuthorDAO authorDAO = new AuthorDAO();
+        TitlesDAO titleDAO = new TitlesDAO();
 
         while (true) {
             displayMenu();
@@ -89,14 +90,14 @@ public class Main {
                 case 5:
                     Titles newTitles = new Titles();
                     System.out.println("Digite o nome: ");
-                    newAuthor.setFirstName(keyboard.next());
-                    System.out.println("Digite o sobrenome: ");
-                    newAuthor.setLastName(keyboard.next());
-                    int insertResult = authorDAO.insert(newTitles);
+                    newTitles.setTitle(keyboard.next());
+                    System.out.println("Digite a edicao: ");
+                    newTitles.setEditionNumber(keyboard.nextInt());
+                    int insertResult = titleDAO.insertTitles(newTitles);
                     if (insertResult > 0) {
-                        System.out.println("Autor inserido com sucesso.");
+                        System.out.println("Titulo inserido com sucesso.");
                     } else {
-                        System.out.println("Falha ao inserir autor.");
+                        System.out.println("Falha ao inserir titulo.");
                     }
                     break;
                 case 6:
